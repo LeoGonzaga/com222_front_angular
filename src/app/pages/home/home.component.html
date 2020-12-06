@@ -1,0 +1,36 @@
+<div class="container">
+  <app-slider></app-slider>
+
+  <h2 class="title">Consoles</h2>
+
+  <div class="card-container">
+    <app-card
+      [image]="
+        'https://blog.br.playstation.com/tachyon/sites/4/2020/10/19_3_thumb.jpg'
+      "
+      [name]="'PlayStation'"
+      [routerLink]="'login'"
+    ></app-card>
+    <app-card
+      [image]="
+        'https://i.pinimg.com/originals/90/a6/bd/90a6bddc7e9aa43d82fe4f923f0ad4ee.jpg'
+      "
+      [name]="'Sony'"
+      [routerLink]="'/consoles/sony'"
+    ></app-card>
+    <app-card
+      [image]="
+        'https://www.somosxbox.com/wp-content/uploads/2020/05/XboxLobo.jpg'
+      "
+      [name]="'xbox'"
+      [routerLink]="'/consoles/xbox'"
+    ></app-card>
+    <app-card
+      [image]="
+        'https://ovicio.com.br/wp-content/uploads/2020/10/20201005-nintendo-switch-logo-black-white-1216019-1280x0-1.jpeg'
+      "
+      [name]="'Switch'"
+      [routerLink]="'/consoles/switch'"
+    ></app-card>
+  </div>
+</div>

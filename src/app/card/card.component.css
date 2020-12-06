@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 50px;
+  padding: 10px;
+  padding-bottom: 50px;
+}
+
+.image-console {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
