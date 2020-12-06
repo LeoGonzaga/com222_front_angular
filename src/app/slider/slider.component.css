@@ -31,6 +31,12 @@ img {
 .name-game {
   font-family: "Press Start 2P", cursive;
 }
+
+span {
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+  font-size: 12px;
+}
 button {
   padding: 10px;
   width: 50%;
