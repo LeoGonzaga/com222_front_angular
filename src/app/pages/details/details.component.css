@@ -1,0 +1,37 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1200px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.title {
+  font-family: "Press Start 2P", cursive;
+}
+
+.avalieble {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #000;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  width: 30%;
+}
+
+@media only screen and (max-width: 500px) {
+  .avalieble {
+    flex-direction: column;
+  }
+  button {
+    width: 100%;
+  }
+}

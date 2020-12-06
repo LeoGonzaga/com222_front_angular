@@ -1,13 +1,7 @@
 .container {
   display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  max-width: 1200px;
-  height: 50px;
-  padding: 10px;
-  padding-bottom: 50px;
-  border: none;
-  font-family: 'Roboto', sans-serif;
+  flex: 1;
+  font-family: "Roboto", sans-serif;
 }
 
 .image-console {
@@ -16,7 +10,7 @@
   padding: 10px;
 }
 
-.container:hover{
+.container:hover {
   background-color: #000;
   color: #fff;
 }

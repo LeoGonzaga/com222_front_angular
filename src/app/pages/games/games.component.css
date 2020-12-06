@@ -1,0 +1,9 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 50px;
+  padding: 10px;
+}
+.title {
+  font-family: "Press Start 2P", cursive;
+}

@@ -11,6 +11,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { GamesComponent } from './pages/games/games.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { GameCardComponent } from './game-card/game-card.component';
+import { SearchComponent } from './search/search.component';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { DetailsComponent } from './pages/details/details.component';
     LoginComponent,
     GamesComponent,
     DetailsComponent,
+    GameCardComponent,
+    SearchComponent,
+    UserCardComponent,
   ],
   imports: [RouterModule, BrowserModule, AppRoutingModule],
   providers: [],
