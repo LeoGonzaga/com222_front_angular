@@ -1,5 +1,22 @@
 <div class="container">
-  <app-slider></app-slider>
+  <ul>
+    <li *ngFor="let item of slides; let i = index">
+      <app-slider
+        @fade
+        *ngIf="i == counter"
+        [image]="slides[i].src"
+        [description]="item.description"
+        [name]="item.name"
+      ></app-slider>
+
+      <!-- <img
+        *ngIf="i == counter"
+        @fade
+        [src]="slideItems[i].src"
+        alt="item.title"
+      /> -->
+    </li>
+  </ul>
 
   <h2 class="title">Consoles</h2>
 
@@ -33,7 +50,5 @@
       [routerLink]="'games/switch'"
     ></app-card>
   </div>
-<app-footer></app-footer>
-
+  <app-footer></app-footer>
 </div>
-

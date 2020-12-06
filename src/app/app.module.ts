@@ -14,7 +14,9 @@ import { DetailsComponent } from './pages/details/details.component';
 import { GameCardComponent } from './game-card/game-card.component';
 import { SearchComponent } from './search/search.component';
 import { UserCardComponent } from './user-card/user-card.component';
-
+import { CreateGameComponent } from './pages/create-game/create-game.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +31,15 @@ import { UserCardComponent } from './user-card/user-card.component';
     GameCardComponent,
     SearchComponent,
     UserCardComponent,
+    CreateGameComponent,
   ],
-  imports: [RouterModule, BrowserModule, AppRoutingModule],
+  imports: [
+    RouterModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

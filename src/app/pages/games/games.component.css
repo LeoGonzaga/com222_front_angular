@@ -3,7 +3,14 @@
   max-width: 1200px;
   height: 50px;
   padding: 10px;
+  padding-top: 10px;
 }
 .title {
   font-family: "Press Start 2P", cursive;
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding-top: 70px;
+  }
 }

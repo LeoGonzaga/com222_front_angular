@@ -8,6 +8,11 @@
   flex: 1;
 }
 
+ul {
+  list-style: none;
+  padding: 0px;
+  background-size: contain;
+}
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
