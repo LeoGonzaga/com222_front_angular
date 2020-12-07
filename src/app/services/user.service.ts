@@ -14,7 +14,7 @@ import API from '../API.js';
 })
 export class UserService {
   constructor(private httpClient: HttpClient) {}
-  url ='https://cors-anywhere.herokuapp.com/' + API;
+  url = API;
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),

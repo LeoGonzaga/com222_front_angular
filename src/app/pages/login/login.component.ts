@@ -47,8 +47,10 @@ export class LoginComponent implements OnInit {
     };
 
     this.user.loginUser(user).subscribe(async (user: any) => {
-      console.log(user);
+      console.log(user.user.name);
       if (user) {
+        await localStorage.setItem('token', user.token);
+        await localStorage.setItem('user', user.user.name);
         window.location.href = 'http://localhost:4200/';
       }
     });

@@ -18,21 +18,15 @@ export class SearchComponent implements OnInit {
   filteredOptions: Observable<string[]>;
   word: string;
 
-  // search(event) {
-  //   console.log(event.target.value);
-  //   this.word = event.target.value;
+  // search() {
+  //   console.log(window.location.href);
+  //   let plataform = window.location.href.split('games/');
+
+  //   this.games.search(plataform[1]).subscribe((games: any) => {
+  //     console.log(games);
+  //     this.options.push(games);
+  //   });
   // }
-
-  search() {
-    console.log(window.location.href);
-    let plataform = window.location.href.split('games/');
-
-    this.games.search(plataform[1]).subscribe((games: any) => {
-      console.log(games);
-      this.options.push(games);
-    });
-  }
   ngOnInit() {
-    this.search();
   }
 }

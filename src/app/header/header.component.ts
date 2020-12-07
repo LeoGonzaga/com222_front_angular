@@ -8,6 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   constructor() {}
 
-  ngOnInit(): void {}
+  showButton: Boolean;
+  hideButtonLogin: Boolean;
+  ngOnInit(): void {
+    this.showAndHideButton();
+  }
 
+  showAndHideButton() {
+    let token = localStorage.getItem('token');
+    console.log(token);
+    if (token) {
+      this.showButton = true;
+      this.hideButtonLogin = false;
+    } else {
+      this.showButton = false;
+      this.hideButtonLogin = true;
+    }
+  }
+
+  exit() {
+    localStorage.clear();
+  }
 }

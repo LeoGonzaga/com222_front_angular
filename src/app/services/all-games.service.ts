@@ -13,7 +13,7 @@ import API from '../API.js';
 })
 export class AllGamesService {
   constructor(private httpClient: HttpClient) {}
-  url = 'https://cors-anywhere.herokuapp.com/' + API;
+  url = API;
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
