@@ -10,5 +10,6 @@ export class UserCardComponent implements OnInit {
   @Input() name: any;
   @Input() image: any;
   @Input() avaliable: any;
+  @Input() rate: any;
   ngOnInit(): void {}
 }

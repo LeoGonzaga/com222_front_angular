@@ -1,19 +1,15 @@
 .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: #000;
-  display: flex;
-  flex: 1;
-  width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .container {
   display: flex;
   height: 280px;
-  background-size: cover;
-}
-img {
-  max-width: 100%;
-  width: 1000px;
+  width: 70%;
+  background-size: contain;
 }
 
 h2 {
@@ -24,6 +20,7 @@ h2 {
 .content {
   padding: 10px;
   color: #fff;
+  text-align: left;
 }
 .center-bnt {
   padding-left: 10px;
@@ -51,9 +48,8 @@ button:hover {
   color: aliceblue;
   padding: 5px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .wrapper {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
-

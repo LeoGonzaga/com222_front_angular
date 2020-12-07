@@ -1,22 +1,10 @@
 <div class="container">
-  <ul>
-    <li *ngFor="let item of slides; let i = index">
-      <app-slider
-        @fade
-        *ngIf="i == counter"
-        [image]="slides[i].src"
-        [description]="item.description"
-        [name]="item.name"
-      ></app-slider>
-
-      <!-- <img
-        *ngIf="i == counter"
-        @fade
-        [src]="slideItems[i].src"
-        alt="item.title"
-      /> -->
-    </li>
-  </ul>
+  <app-slider
+    *ngFor="let item of slides; let i = index"
+    [image]="item.src"
+    [description]="item.description"
+    [name]="item.name"
+  ></app-slider>
 
   <h2 class="title">Consoles</h2>
 
@@ -26,28 +14,28 @@
         'https://blog.br.playstation.com/tachyon/sites/4/2020/10/19_3_thumb.jpg'
       "
       [name]="'PlayStation'"
-      [routerLink]="'games/playstation'"
+      [routerLink]="'games/Playstation'"
     ></app-card>
     <app-card
       [image]="
-        'https://i.pinimg.com/originals/90/a6/bd/90a6bddc7e9aa43d82fe4f923f0ad4ee.jpg'
+        'https://i.pinimg.com/originals/65/57/ce/6557ce91c89ca54ba2f3d9fa58167dbf.jpg'
       "
-      [name]="'Sony'"
-      [routerLink]="'games/sony'"
+      [name]="'PC'"
+      [routerLink]="'games/Pc'"
     ></app-card>
     <app-card
       [image]="
         'https://www.somosxbox.com/wp-content/uploads/2020/05/XboxLobo.jpg'
       "
       [name]="'xbox'"
-      [routerLink]="'games/xbox'"
+      [routerLink]="'games/Xbox'"
     ></app-card>
     <app-card
       [image]="
         'https://ovicio.com.br/wp-content/uploads/2020/10/20201005-nintendo-switch-logo-black-white-1216019-1280x0-1.jpeg'
       "
       [name]="'Switch'"
-      [routerLink]="'games/switch'"
+      [routerLink]="'games/Switch'"
     ></app-card>
   </div>
   <app-footer></app-footer>

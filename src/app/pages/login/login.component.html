@@ -7,9 +7,17 @@
       alt=""
     />
 
-    <input type="email" placeholder="email@email.com" />
-    <input type="password" placeholder="Digite sua senha" />
-    <button>Entrar</button>
+    <input
+      (keyup)="getEmail($event)"
+      type="email"
+      placeholder="email@email.com"
+    />
+    <input
+      (keyup)="getPassword($event)"
+      type="password"
+      placeholder="Digite sua senha"
+    />
+    <button (click)="loginUser()">Entrar</button>
   </div>
   <div class="division"></div>
   <div class="column">
@@ -22,9 +30,21 @@ https://64.media.tumblr.com/80d3210260eb16c5cfe6b288d83ae095/tumblr_p03hmpcgrw1q
       width="100%"
       alt=""
     />
-    <input type="text" placeholder="Digite um nome de usuário" />
-    <input type="email" placeholder="Digite seu melhor email" />
-    <input type="password" placeholder="Digite uma boa senha" />
-    <button>Criar a conta</button>
+    <input
+      (keyup)="getUserName($event)"
+      type="text"
+      placeholder="Digite um nome de usuário"
+    />
+    <input
+      type="email"
+      (keyup)="getEmail($event)"
+      placeholder="Digite seu melhor email"
+    />
+    <input
+      type="password"
+      (keyup)="getPassword($event)"
+      placeholder="Digite uma boa senha"
+    />
+    <button (click)="createUser()">Criar a conta</button>
   </div>
 </div>

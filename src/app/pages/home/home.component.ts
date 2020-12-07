@@ -34,14 +34,12 @@ export class HomeComponent implements OnInit {
   allGames: any;
   slides: any = [];
 
-
   getAll() {
     this.games.getAllProducts().subscribe((game: any[]) => {
       console.log(game);
-      this.allGames = game;
-      console.log('todos', this.allGames);
-      this.allGames?.games.map((i) => {
-        console.log(i.imageUrl);
+      // console.log('todos', this.allGames);
+      game?.map((i) => {
+        // console.log(i.imageUrl);
         let item = {
           src: i.imageUrl,
           name: i.name,
