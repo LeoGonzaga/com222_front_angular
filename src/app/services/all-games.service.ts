@@ -61,6 +61,30 @@ export class AllGamesService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
+  createGame(token, data): Observable<any[]> {
+    console.log(data.summary);
+    let httpOptionsToken = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      }),
+    };
+    return this.httpClient
+      .post<any[]>(
+        this.url + '/games/create',
+        JSON.stringify({
+          name: data.name,
+          summary: data.summary,
+          developer: data.developer,
+          genre: data.genre,
+          imageUrl: data.imageUrl,
+          console: data.console,
+        }),
+        httpOptionsToken
+      )
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
   search(conso): Observable<any[]> {
     console.log(this.url + '/games/complete');
     return this.httpClient

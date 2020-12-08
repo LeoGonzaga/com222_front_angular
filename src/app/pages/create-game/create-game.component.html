@@ -5,42 +5,79 @@
     alt=""
   />
   <h2 class="title">Criar um novo jogo</h2>
-  <input type="text" placeholder="Nome do jogo" />
-  <input type="text" placeholder="Empresa desenvolvedora" />
-  <select name="cars" id="cars">
-    <option value="volvo">Selecionar console</option>
-    <option value="volvo">PlayStation</option>
-    <option value="saab">X Box</option>
-    <option value="mercedes">Sony</option>
-    <option value="audi">Switch</option>
+  <input (keyup)="getName($event)" type="text" placeholder="Nome do jogo" />
+  <input
+    (keyup)="getDeveloper($event)"
+    type="text"
+    placeholder="Empresa desenvolvedora"
+  />
+  <select
+    name="console"
+    id="console"
+    #console
+    (change)="getConsole(console.value)"
+  >
+    >
+    <option value="Selecionar">Selecionar console</option>
+    <option value="PlayStation">PlayStation</option>
+    <option value="XBox">X Box</option>
+    <option value="Pc">PC</option>
+    <option value="Switch">Switch</option>
   </select>
   <div class="check-container">
     <div>
-      <input class="check" type="checkbox" id="scales" name="scales" checked />
-      <label for="scales">Ação</label>
-    </div>
-    <div>
-      <input class="check" type="checkbox" id="check" name="scales" checked />
-      <label for="scales">Aventura</label>
-    </div>
-    <div>
-      <input class="check" type="checkbox" id="scales" name="scales" checked />
-      <label for="scales">Estratégia</label>
-    </div>
-    <div>
-      <input class="check" type="checkbox" id="scales" name="scales" checked />
-      <label for="scales">RPG</label>
-    </div>
-    <div>
-      <input class="check" type="checkbox" id="scales" name="scales" checked />
-      <label for="scales">Esporte</label>
-    </div>
-    <div>
-      <input class="check" type="checkbox" id="scales" name="scales" checked />
-      <label for="scales">Simulação</label>
+      <input
+        #radio
+        type="radio"
+        name="test"
+        value="Ação"
+        (change)="onCheckGenre(radio.value)"
+      />
+      Ação
+      <input
+        #radio2
+        type="radio"
+        name="test"
+        value="Aventura"
+        (change)="onCheckGenre(radio2.value)"
+      />
+      Aventura
+      <input
+        #radio3
+        type="radio"
+        name="test"
+        value="RPG"
+        (change)="onCheckGenre(radio3.value)"
+      />
+      RPG
+      <input
+        #radio4
+        type="radio"
+        name="test"
+        value="Estratégia"
+        (change)="onCheckGenre(radio4.value)"
+      />
+      Estratégia
+      <input
+        #radio5
+        type="radio"
+        name="test"
+        value="Simulação"
+        (change)="onCheckGenre(radio.value)"
+      />
+      Simulação
+      <input
+        #radio6
+        type="radio"
+        name="test"
+        value="Esporte"
+        (change)="onCheckGenre(radio2.value)"
+      />
+      Esporte
     </div>
   </div>
   <textarea
+    (keyup)="getSummary($event)"
     name="description"
     id=""
     cols="30"
@@ -48,7 +85,7 @@
     placeholder="
   Descrição do jogo"
   ></textarea>
-  <input type="text" placeholder="URL da imagem" />
+  <input (keyup)="getImage($event)" type="text" placeholder="URL da imagem" />
 
-  <button>Cadastrar</button>
+  <button (click)="createGame()">Cadastrar</button>
 </div>
