@@ -14,7 +14,6 @@ import API from '../API.js';
 export class AllGamesService {
   constructor(private httpClient: HttpClient) {}
   url = API;
-
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
@@ -37,6 +36,28 @@ export class AllGamesService {
     console.log(this.url + '/reviews/' + name);
     return this.httpClient
       .get<any[]>(this.url + '/reviews/?name=' + name, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  createReview(token, aval): Observable<any[]> {
+    console.log('token', token, aval);
+    let httpOptionsToken = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      }),
+    };
+    return this.httpClient
+      .post<any[]>(
+        this.url + '/reviews/create',
+        JSON.stringify({
+          rate: aval.rate,
+          text: aval.text,
+          name: aval.name,
+          email: aval.email,
+        }),
+        httpOptionsToken
+      )
       .pipe(retry(2), catchError(this.handleError));
   }
 

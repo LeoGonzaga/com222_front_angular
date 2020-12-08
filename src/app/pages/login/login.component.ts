@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
       console.log(user.user.name);
       if (user) {
         await localStorage.setItem('token', user.token);
-        await localStorage.setItem('user', user.user.name);
+        await localStorage.setItem('user', user.user.email);
         window.location.href = 'http://localhost:4200/';
       }
     });
