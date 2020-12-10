@@ -1,4 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+  font-size: 1rem;
+}
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: #f3f3f8;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+button {
+  cursor: pointer;
+  transition: 0.2s !important;
+}
+
+button,
+input {
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 0px 10px rgba(18, 38, 63, 0.2);
+}
+
+button:active,
+button:focus,
+input:active,
+input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 0px 15px rgba(84, 139, 177, 0.8);
+}
+
+/* Temporary */
+.bg-info {
+  background-color: rgb(91, 133, 161) !important;
+}
+
+.mainContainer {
+  display: flex;
+  align-self: flex-start;
+  margin: 2em;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(18, 38, 63, 0.1);
+}
+
+/* Colors */
+.bg1 {
+  background-color: rgba(84, 139, 177, 0.9);
+}
+.bg2 {
+  background-color: rgba(234, 61, 78, 0.9);
+}
