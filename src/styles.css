@@ -37,14 +37,17 @@ input:focus {
 .bg-info {
   background-color: rgb(91, 133, 161) !important;
 }
-
 .mainContainer {
   display: flex;
   align-self: flex-start;
   margin: 2em;
+  max-width: 1400px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 20px 0 rgba(18, 38, 63, 0.1);
+}
+h2 {
+  font-size: 1.4em;
 }
 
 /* Colors */
